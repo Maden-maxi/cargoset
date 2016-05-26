@@ -1,0 +1,20 @@
+doctype html
+html(lang="ru")
+	head
+		block meta
+			meta(charset="UTF-8")
+		block link
+			link(rel="stylesheet", href="css/styles.css")
+		block title
+			title Default title
+	body
+		.container-fluid.wrapper
+			block content
+		//build:js js/vendor.js
+		//bower:js
+		//endbower
+		//endbuild
+		//build:js js/main.js
+		script(src="js/main.js")
+		script(src="js/plugins.js")
+		//endbuild

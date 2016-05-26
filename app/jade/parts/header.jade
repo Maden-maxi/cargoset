@@ -1,0 +1,68 @@
+-var nav = {production: 'Производство', delivery: 'Достаква и оплата', worranty: 'Гарантия', statments: 'Статьи', contacts: 'Контакты'};
+.header
+	nav.navbar.navbar-default.navbar-static-top.nav-top
+		.centering
+			//.navbar-header
+				button.navbar-toggle(type='button', data-toggle='collapse', data-target='#responsive-menu')
+					span.sr-only Toggle navigation
+					.icon-bar
+					.icon-bar
+					.icon-bar
+			#responsive-menu.collapse.navbar-collapse.navbar-left
+				ul.nav.navbar-nav.top-menu
+					each linkName,linkPath in nav
+						li: a.nav-link(href='#'+linkPath) #{linkName}
+			ul.nav.navbar-nav.navbar-left.top-menu-center
+				li: a(href="#"): span.btn.btn-primary Бесплатная доставка
+				li: a: span.ukrdev всей Украине при заказе от 1000грн.
+				li: a(href="#"): span.text-primary Подробнее
+			ul.nav.navbar-nav.navbar-right
+				li
+					a(href="#")
+						span.icon.icon-user-plus
+						span  Регистрация
+				li
+					a(href="#")
+						span.icon.icon-lock
+						span Вход
+	.row
+		.centering
+			.col-xs-12.col-md-3
+				img.logo.img-responsive(src='images/logo-cargoset.png')
+			.col-xs-12.col-md-3.contact-phones
+				i.fa.fa-phone.fa-lg
+				.select
+					a#recall Перезвоните мне
+					select#phones
+						option (095) 204 80 14
+						option (050) 254 81 15
+						option (055) 254 82 14
+						option (068) 254 86 13
+					//.dropdown
+						button.btn.btn-default.dropdown-toggle(type='button', id='dropdown-phones', data-toggle='dropdown', aria-expanded='false')
+							span (095) 254 86 18
+							span.caret
+						ul.dropdown-menu(aria-labelledby="dropdownMenu2")
+							li: a(href="#") (097) 123 45 67
+							li: a(href="#") (050) 123 45 68
+							li: a(href="#") (068) 124 65 75
+				span.work-grafic!= "Сегодня работаем<br>9:00 - 18:00"
+			.col-xs-12.col-md-3
+				form(action="" role="search").form
+					.input-group
+						input.form-control(type="text", name="search", placeholder="Поиск по сайту", aria-describedby='icon-search')
+						span#icon-search.input-group-btn
+							button(type='submit').btn.btn-default
+								i.glyphicon.glyphicon-search
+			.col-xs-12.col-md-3
+				ul.action
+					li.action-wrapper
+						i.icon-star-empty
+						ul.actions
+							li.actions-name Избрание
+							li.actions-quantity нет товаров
+					li.action-wrapper
+						i.icon-cart
+						ul.actions
+							li.actions-name Корзина
+							li.actions-quantity нет товаров

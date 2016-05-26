@@ -1,0 +1,45 @@
+-
+	catalog1 = ['Канаты, Тросы', 'Стропы грузоподъемочные', 'Комплектующие для строп', 'Средства Крепления грузов', 'Такелаж', 'МТМ, Блоки, Лебедки'];
+	catalog2 = ['Тали, Тележки', 'Захваты, Траверсы', 'Цепи в ассортименте', 'Трубы стальные', 'Складское оборудование', 'Средства защиты'];
+footer.row
+	.centering
+		h4 Каталог товаров
+		.col-md-2
+			ul
+				each item in catalog1
+					li
+						a(href="#") #{item}
+		.col-md-3
+			ul
+				each item in catalog2
+					li
+						a(href="#") #{item}
+		.col-md-3.contacts
+			.contacts-phones
+				i.fa.fa-phone.fa-lg.contacts-icon
+				ul.contacts-list-phones
+					li.contacts-phone!= "(097) 123-45-78"
+					li.contacts-phone (050) 123-45-78
+					li.contacts-phone (063) 123-45-78
+			address.contacts-address
+				i.fa.fa-map-marker.fa-lg.contacts-icon
+				span.contacts-phones-str  Украина, г.Кривой Рог, ул.Ленина, 1 оф. 315
+		.col-md-4
+			div.subs
+				p.subs-title Хотите получать свежие акции и предложения?
+				form(action="").form
+					.input-group
+						.input-group-btn
+							button.btn.btn-default
+								i.fa.fa-envelope-o(aria-hidden="true")
+						input.form-control(type="email", placeholder='Ваша эл.почта', name='useremail')
+						.input-group-btn
+							button.btn.btn-warning.subs-btn Подписаться
+			a(href="#")
+				button.btn.btn-info.btn-to-top
+					i.glyphicon.glyphicon-chevron-up.btn-to-top-icon
+					span Наверх
+.row
+	.centering.copyright
+		.copy!= "&copy; 2016 ООО <q>Каргосет</q>"
+		.aliace!= "Разработка интернет-магазина - <a href='#'>Флаберс</a>"

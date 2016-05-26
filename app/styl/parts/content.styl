@@ -1,0 +1,170 @@
+.content
+	background #fff
+.breadcrumb
+	padding-left 0
+	padding-top 0
+	li:first-child
+		.btn
+			border-radius 0
+			border none
+		//background #13559f
+		//box-shadow inset 1px 1px 1px rgba(0,0,0,.7)
+		& i
+			color #fff
+		& span
+			font-conf(#fff, ptsr, 17px)
+			padding-left 5px
+	background #fff
+	&>li+li:before
+		content: "→"
+	&>li+li.active:after
+		content: "↴"
+		line-height 2px
+		color #ccc
+	li:last-child
+		font-conf(#212121, robreg, 13px)
+	a
+		font-conf(#212121, robreg, 13px)
+.product-name
+	font-conf(#212121, robold, 40px)
+	padding-left 10px
+.imagebox
+	display flex
+	height 25%
+	width 100%
+	border 1px solid #f2f2f1
+	img
+		margin auto
+.product-list
+	@media screen and (max-width: 1024px)
+		display none
+	&-header
+		@media screen and (max-width: 1024px)
+			display none
+	margin 0
+	padding 0
+	list-style-type none
+	&-wrapper
+		display flex
+		justify-content space-between
+		align-items center
+		border-bottom 1px solid #f2f2f1
+		&:last-child
+			border none
+	&-img
+		width 61px
+		height 61px
+	&-name
+		font-conf(#0e4f97, robreg, 13px)
+		padding 10px
+		flex 1
+	&-price
+		display flex
+		align-items center
+		flex-flow column nowrap
+		background #fff9e8
+		padding 5px
+		width 72px
+		height 42px
+		border-radius 2px
+		margin-right 10px
+		margin-left 20px
+		&-quantity
+			font-conf(#212121, rblack, 16px)
+		&-preitem
+			font-conf(#212121, robreg, 13.5px)
+.stat-header
+	font-conf(#212121, robreg, 15px)
+.weight
+	display flex
+	flex-flow row wrap
+	&-block
+		display flex
+		flex-flow column wrap
+		padding-left 5px
+	&-articul
+		padding-bottom 4px
+	&-articul,&-number
+		font-conf(#212121, robreg, 12px)
+		line-height 14px
+	&-select li, .jq-selectbox__select-text
+		font-conf(#212121, robreg, 20px)
+.length
+	color rgb(0, 0, 0)
+.price
+	font-conf(#212121, rblack, 34px)
+	sup
+		font-conf(#212121, robreg,13px)
+		top -1.5em
+.price + span
+	font-conf(#1c9708, rlight, 13px)
+.charakteristiks
+	font-conf(#212121, robold, 16px)
+	margin 0 15px
+dl
+	dt
+		font-conf(#212121, robold, 13px)
+	dd
+		font-conf(#515151, robreg, 13px)
+#myTabs
+	a[role=tab]
+		margin 0
+	.active a
+		font-conf(#212121, robreg, 14px)
+		border none
+		border-radius 0
+		box-shadow inset 0px 5px 0px #165aa7
+		margin 0
+	li
+		border-left 1px solid #ccc
+		border-top none
+#myTabsContent
+	.tab-pane[role='tabpanel']
+		padding 20px 0 0 0
+	p
+		font-conf(#212121, robreg, 13px)
+//at demo
+.number-plus-minus .jq-number 
+	padding 0 38px
+	&__field
+		width: 60px
+
+	&__field input 
+		text-align center
+		font-conf(#212121, robreg, 15px)
+
+	&__spin
+		left 0
+		height 34px
+
+	&__spin.plus
+		right 0
+		left auto
+
+	&__spin:before 
+		content ''
+		position absolute
+		top 15px
+		left 10px
+		width 12px
+		height 2px
+		border none
+		background #666
+
+	&__spin.minus:after
+		display none
+
+	&__spin.plus:after
+		top 10px
+		left 15px
+		width 2px
+		height 12px
+		border none
+		background #666
+
+	&__spin:hover:before,
+	&__spin.plus:hover:after
+		background #000
+
+	&
+		padding: 0 38px

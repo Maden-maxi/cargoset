@@ -1,0 +1,35 @@
+{
+  "name": "cargoset",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "jquery-ui": "jqueryui#^1.11.4",
+    "normalize-css": "normalize.css#^4.1.1",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.3",
+    "icomoon-bower": "icomoon#^0.1.0",
+    "jquery-form-styler": "1.7.4"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.min.css",
+        "less/bootstrap.less"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "less/font-awesome.less",
+        "css/font-awesome.css",
+        "scss/font-awesome.scss"
+      ]
+    },
+    "jquery-form-styler": {
+    	"main": [
+    		"jquery.formstyler.min.js",
+			"jquery.formstyler.css"
+    	]
+    }
+  }
+}
