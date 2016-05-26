@@ -1,0 +1,127 @@
+.myCarusel
+	display block
+	&-header
+		font-conf(#4f4f4f,robreg, 25px)
+		padding 20px 0 0 0
+		&-sub
+			padding 0
+			font-conf(#0e4f97,robold, 48px)
+
+
+/** Carousel **/
+
+.jcarousel
+	position relative
+	overflow hidden
+	width 100%
+	&-wrapper
+		margin 20px auto
+		position relative
+		//border 10px solid #fff
+		//border-radius 5px
+		//box-shadow 0 0 2px #999
+	ul
+		width 20000em
+		position relative
+		list-style none
+		margin 0
+		padding 0
+
+
+	li
+		width 200px
+		float left
+		//border 1px solid #fff
+		box-sizing border-box
+
+	img
+		display block
+		max-width 100%
+		height auto !important
+
+	/** Carousel Controls **/
+	&-control
+
+		&-prev,
+		&-next
+			position absolute
+			top 50%
+			margin-top -15px
+			padding-top 7px
+			width 26px
+			height 42px
+			text-align center
+			background #f9f8f7
+			color #fff
+			text-decoration none
+			text-shadow 0 0 1px #000
+			font 24px/27px Arial, sans-serif
+			border-radius 0px
+			box-shadow 0 0 4px #F0EFE7
+		&-prev.inactive,
+		&-next.inactive
+				display none
+
+		&-prev
+			left 0px
+
+		&-next
+			right 0px
+		
+	/** Carousel Pagination **/
+
+	&-pagination
+		position absolute
+		bottom -40px
+		left 50%
+		transform translate(-50%, 0)
+		margin 0
+		a
+			text-decoration none
+			display inline-block
+
+			font-size 11px
+			height 10px
+			width 10px
+			line-height 10px
+			background #fff
+			color #4E443C
+			border-radius 10px
+			text-indent -9999px
+			margin-right 7px
+			box-shadow 0 0 2px #4E443C
+		a.active
+			background #4E443C
+			color #fff
+			opacity 1
+			box-shadow 0 0 2px #F0EFE7
+	/*Custom styles*/
+	.glyphicon.glyphicon-chevron-left,
+	.glyphicon.glyphicon-chevron-right
+		color #999999
+	.hiddenvar
+		display none
+		font-size 0
+	&-item
+		display flex
+		flex-flow column wrap
+		padding 0 5px
+		&-description
+			display flex
+			flex-flow column nowrap
+			justify-content space-around
+			height 158px
+			padding 10px
+			border-top 1px solid #ddd
+			background-color #fff
+		&-name
+			font-conf(#0e4f97, robreg, 18.5px)
+		&-price
+			display flex
+			&-from
+				line-height 42px
+			&-quantity
+				font-conf(#212121, robold, 30px)
+			&-currency
+				line-height 20px
+	

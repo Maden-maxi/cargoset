@@ -1,3 +1,27 @@
-.centering
-	p Ранее 
-	p Вы смотрели
+-
+	var items = {
+		pictures:['pic16', 'pic15', 'pic14', 'pic13', 'pic12', 'pic11','pic16','pic13','pic15'],
+		name:['Стяжной ремень 1.5 тн','Звено соеденительное европейское типа G80...','Скобка такелажная омегообразная тип...','Захват горизонтальный типа DHQ', 'Стальной канат ГОСТ 3077-80', 'Строп текстильний двухветвевой (2СТ)','Скобка такелажная омегообразная тип...', 'Захват горизонтальный типа DHQ', 'Стяжной ремень 1.5 тн'],
+		price:['15.34','8.17', '28.79', '15.34', '5.34', '90.85', '28.79', '15.34','8.17']
+	}
+	var i = items.name.length
+	var n = 0
+.centering.myCarusel
+	p.myCarusel-header Ранее 
+	p.myCarusel-header-sub Вы смотрели
+	.jcarousel-wrapper
+		.jcarousel
+			ul.jcarousel-list
+				while n < i
+					li.jcarousel-item
+						img(src="images/slider/#{items.pictures[n]}.jpg", alt="#{n}").jcarousel-item-image
+						.jcarousel-item-description
+							a(href="#").jcarousel-item-name #{items.name[n]}
+							.jcarousel-item-price
+								span.jcarousel-item-price-from от
+								span.jcarousel-item-price-quantity #{items.price[n]}
+								sup.jcarousel-item-price-currency грн/шт. 
+								span.hiddenvar!= n++
+							.text-success.jcarousel-item-status на складе
+		a.jcarousel-control-prev(href="#"): i.glyphicon.glyphicon-chevron-left
+		a.jcarousel-control-next(href="#"): i.glyphicon.glyphicon-chevron-right 

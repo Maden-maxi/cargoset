@@ -32,6 +32,7 @@
 	display flex
 	height 25%
 	width 100%
+	background #fff
 	border 1px solid #f2f2f1
 	img
 		margin auto
@@ -73,7 +74,27 @@
 				font-conf(#212121, robreg, 13.5px)
 .stat-header
 	font-conf(#212121, robreg, 15px)
+//.irs-line-mid, .irs-line-left, .irs-line-right, .irs-bar, .irs-bar-edge, .irs-slider
+	//background url(../images/sprite-skin-flat1.png) repeat-x
+.length
+	.irs-grid
+		height 40px
+	.irs-grid-text
+		display none
+	.irs-slider
+		width 13px
+		height 13px
+		border-radius 30px
+		background #165aa7
+		top 21px
+	.irs-single
+		background #f89b2a
+		&::after
+			border-top-color #f89b2a
 .weight
+	.rotate
+		transform-style preserve-3d
+		transform rotateX(180deg)
 	display flex
 	flex-flow row wrap
 	&-block
@@ -87,8 +108,6 @@
 		line-height 14px
 	&-select li, .jq-selectbox__select-text
 		font-conf(#212121, robreg, 20px)
-.length
-	color rgb(0, 0, 0)
 .price
 	font-conf(#212121, rblack, 34px)
 	sup
@@ -96,7 +115,52 @@
 		top -1.5em
 .price + span
 	font-conf(#1c9708, rlight, 13px)
+
+.action-buttons
+	display flex
+	justify-content space-around
+	align-items center
+	&-field
+		&::before
+			content "+"
+			color #ddd
+		&::after
+			content "-"
+			color #ddd
+	&-number
+		width 38px
+		height 44px
+		border 1px solid #ddd
+		text-align center
+		
+	&-button
+		font-conf(#fff, rmedium, 15px)
+		border-radius 2px
+		border 0
+		padding 13px 20px
+		outline none
+	&-add-to-basket
+		background linear-gradient(180deg, #86c500, #4f9e00)
+		box-shadow 0px 2px 0px #3c7a00
+	&-buy-onclick
+		background linear-gradient(180deg, #1a5eab, #0d4e97)
+		box-shadow 0px 2px 0px #043d7e
+@media screen and (max-width: 1199px)
+	.border-bottom
+		border-bottom 1px solid #ccc
+		margin-bottom 20px
+@media screen and (max-width: 1024px)
+	.row.row-tab
+		margin-top 10px
+.bd
+	padding 15px 0
+	&:first-child
+		border-bottom none
+	border 1px solid #ddd
+	&:first-child
+		padding 0
 .characteristics
+	padding 20px 0
 	@media screen and (max-width: 1024px)
 		display none
 	h3
@@ -132,23 +196,30 @@
 	padding 0 38px
 	&__field
 		width: 60px
+		font-conf(#212121, robreg, 15px)
 
 	&__field input 
 		text-align center
 		font-conf(#212121, robreg, 15px)
+		padding 3px 9px
 
 	&__spin
-		left 0
-		height 34px
+		left 10px
+		height 26px
 
 	&__spin.plus
-		right 0
+		right 10px
 		left auto
+		border-left 0
+		border-radius 0 3px 3px 0
+	&__spin.minus
+		border-right 0
+		border-radius 3px 0 0 3px
 
 	&__spin:before 
 		content ''
 		position absolute
-		top 15px
+		top 11px
 		left 10px
 		width 12px
 		height 2px
@@ -159,7 +230,7 @@
 		display none
 
 	&__spin.plus:after
-		top 10px
+		top 6px
 		left 15px
 		width 2px
 		height 12px

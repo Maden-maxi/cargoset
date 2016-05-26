@@ -8,7 +8,9 @@
     "bootstrap": "^3.3.6",
     "font-awesome": "fontawesome#^4.6.3",
     "icomoon-bower": "icomoon#^0.1.0",
-    "jquery-form-styler": "1.7.4"
+    "jquery-form-styler": "1.7.4",
+    "jcarousel": "0.3.4",
+    "ion.rangeSlider": "2.1.4"
   },
   "overrides": {
     "bootstrap": {
@@ -30,6 +32,14 @@
     		"jquery.formstyler.min.js",
 			"jquery.formstyler.css"
     	]
+    },
+    "ion.rangeSlider": {
+        "main": [
+            "js/ion.rangeSlider.js",
+            "css/ion.rangeSlider.css",
+            "css/ion.rangeSlider.skinFlat.css",
+            "img/sprite-skin-flat.png"
+        ]
     }
   }
 }

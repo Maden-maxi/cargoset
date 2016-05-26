@@ -25,15 +25,43 @@ footer
 		padding-top 20px
 		font-conf(#fff, robreg, 13px)
 		line-height 24px
+.subscribe
+	display flex
+	flex-flow column wrap
+	justify-content space-around
+	align-items flex-end
 .subs
 	border 1px solid #fff
 	padding 20px
+	margin-bottom 1.1vw
+	width 100%
+	&-input-group
+		width 100%
 	&-title
 		font-conf(#fff, robreg, 15px)
 	&-btn
 		font-conf(#212121, robreg, 13px)
 		background: linear-gradient(180deg, #ffc000, #ffae00)
-		padding 8.5px 10px
+		padding 7px 10px
+		border-radius 0 3px 3px 0
+		align-self flex-end
+		outline 0
+		border 0
+	&-wrapper-btn
+		background: linear-gradient(180deg, #ffc000, #ffae00)
+		outline 0
+		border 0
+		padding 0
+		border-radius 0 3px 3px 0
+	&-ico
+		background: linear-gradient(180deg, #fff, #e7e7e6)
+		border-right 0px
+	input
+		background: linear-gradient(180deg, #fff, #e7e7e6)
+		border-left 0
+		outline none
+		width 100%
+		font-conf(#ccc, robreg, 13px)
 .btn-to-top 
 	float right
 	margin-top 15px

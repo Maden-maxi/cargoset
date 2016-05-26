@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/icomoon-bower/style.css" />
     <link rel="stylesheet" href="bower_components/jquery-form-styler/jquery.formstyler.css" />
+    <link rel="stylesheet" href="bower_components/ion.rangeSlider/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="bower_components/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css" />
     <!--endbower-->
     <!--endbuild-->
     <!--build:css css/main.css-->
@@ -119,18 +121,34 @@
               <div class="col-xs-12 col-md-9">
                 <div class="row">
                   <div class="col-md-4">
-                    <div class="imagebox"><img src="images/product.png" alt="prod"></div>
+                    <button type="button" data-toggle="modal" data-target="#imgModal" class="imagebox"><img src="images/product.png" alt="prod"></button>
+                    <div id="imgModal" tabindex="1" role="dialog" aria-labelledby="imgModalLabel" class="modal fade">
+                      <div role="document" class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i aria-hidden="true" class="glyphicon glyphicon-remove"></i></button>
+                            <h4 id="imgModalLabel" class="modal-title"></h4>
+                          </div>
+                          <div class="modal-body">
+                            <div class="imagebox"><img src="images/product.png" alt="prod"></div>
+                          </div>
+                          <div class="modal-footer">
+                            <p>Строп канатный петлевой</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-md-8">
-                    <div class="row">
-                      <div class="col-md-6 weight">
+                    <div class="row bd">
+                      <div class="col-md-6 col-lg-5 weight">
                         <h4 class="stat-header">Грузоподьемность <sup><i class='glyphicon glyphicon-info-sign'></i></sup></h4>
                         <div class="row">
                           <div class="col-md-6">
                             <div class="weight-select">
                               <select id="weight" name="weight">
-                                <option>1.25 тн</option>
-                                <option selected="selected">1.50 тн</option>
+                                <option selected="selected">1.25 тн</option>
+                                <option>1.50 тн</option>
                                 <option>1.75 тн</option>
                                 <option>2.00 тн</option>
                               </select>
@@ -141,22 +159,25 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-6 col-lg-7">
                         <div class="number-plus-minus length">
                           <h4 for="length" class="stat-header">Длина, мм <sup><i class='glyphicon glyphicon-info-sign'></i></sup></h4>
-                          <input type="number" min="10" max="2000" step="10" name="length" id="length" readonly>
+                          <input id="length" type="number" min="10" max="2000" step="10" name="length" readonly>
+                          <input id="range" type="text" value="" name="range">
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-md-4">
+                    <div class="row bd">
+                      <div class="col-xs-12 col-lg-4 border-bottom">
                         <p class="price">15205.24<sup>грн/шт</sup></p><span>в наличии</span>
                       </div>
-                      <div class="col-md-8">
-                        <form class="form">
-                          <input type="number">
-                          <button type="submit" class="btn btn-success">Добавить в корзину</button>
-                          <button type="submit" class="btn btn-primary">Купить в один клик</button>
+                      <div class="col-xs-12 col-lg-8">
+                        <form class="action-buttons">
+                          <div class="action-buttons-field">
+                            <input type="text" value="1" pattern="/[0-9]/" class="action-buttons-number">
+                          </div>
+                          <button type="submit" class="action-buttons-button action-buttons-add-to-basket">Добавить в корзину</button>
+                          <button type="submit" class="action-buttons-button action-buttons-buy-onclick">Купить в 1 клик</button>
                         </form>
                       </div>
                     </div>
@@ -185,7 +206,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row row-tab">
                   <div class="col-md-4 product">
                     <h3 class="product-list-header">Сопутствующие товары</h3>
                     <ul class="product-list">
@@ -217,16 +238,16 @@
                         <p>При изготовлении ветвевых стропов мы применяем импортные крюки типа 320А, они несколько меньше аналогичных отечественных крюков, но не уступают им в грузоподъемности. </p>
                       </div>
                       <div id="stats" role="tabpanel" class="tab-pane fade">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores tenetur voluptatem ex.</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit ipsum alias assumenda doloremque laudantium voluptates ad eius id iste deserunt unde totam reiciendis sapiente, odio iure dolorum laboriosam ullam minus eaque dolor rem! Officiis sunt, consequuntur excepturi iste reprehenderit provident id dolores distinctio est vel deleniti soluta, nihil, enim, officia dolore. Quae porro ad obcaecati sunt nulla dolores accusamus dolorem. Ipsa cupiditate magnam laudantium reprehenderit, maxime fugit obcaecati, porro quod possimus soluta est omnis rem eius natus accusamus ad dolore culpa vitae doloremque libero illum eos at expedita incidunt? Necessitatibus aspernatur rem placeat itaque vero, doloremque nesciunt ratione cum aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores tenetur voluptatem ex.</p>
                       </div>
                       <div id="photos" role="tabpanel" class="tab-pane fade">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore sed, rem neque in labore!</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum odit blanditiis earum, nobis quo architecto eos mollitia vero recusandae ad saepe in temporibus inventore dolorem, quia consequuntur velit quae modi. Accusamus nisi totam omnis vel eius expedita deleniti rem amet veritatis, incidunt, vitae aperiam, soluta dolorum perferendis at, itaque enim fugiat pariatur dicta molestias repellat culpa? Incidunt debitis, voluptatem quisquam eum a nisi facere doloribus repellendus ea recusandae id omnis illo sed, nulla repellat libero repudiandae quam illum ex tenetur rem magni. Quibusdam tenetur ut debitis harum at. Sunt, facere. Ut, adipisci ratione amet exercitationem repudiandae eligendi, asperiores fuga magni maiores error sit iure doloremque delectus veritatis totam iste illo. Maxime fuga laborum quia in quasi cumque nam ea minima, vitae expedita qui, earum soluta quo quisquam eum eos accusamus voluptate! Dolor nulla alias provident, quidem inventore repellendus. Accusantium accusamus animi, laboriosam cumque qui adipisci optio, consectetur quam. Ipsum debitis maiores hic tempora numquam voluptate harum animi, at minus mollitia quaerat molestias, natus culpa excepturi. A obcaecati modi rerum consequatur hic, veritatis voluptate accusamus adipisci maiores suscipit. Quod iste, officiis aperiam corrupti natus alias magni eveniet nisi cumque, voluptate cum sit atque architecto earum similique nemo. Unde necessitatibus placeat, ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore sed, rem neque in labore!</p>
                       </div>
                       <div id="videos" role="tabpanel" class="tab-pane fade">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, odio, asperiores.</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam et, voluptates quod aspernatur quas laborum modi sint? Nemo soluta quam ea corrupti nihil eum qui aspernatur quo voluptas possimus a numquam, omnis magni modi voluptate rerum quidem alias deleniti esse iure dolorum maiores, consectetur. Nulla magnam, voluptatem autem voluptatum nemo sapiente reprehenderit totam, voluptas praesentium beatae neque vitae architecto atque quod optio consequatur? Nobis saepe assumenda exercitationem, magnam ipsam sit laborum porro quos eum corporis. Suscipit iusto soluta amet assumenda temporibus asperiores, quidem! Deleniti explicabo quod, minus, libero, quisquam, quaerat officiis animi corporis reiciendis quo nesciunt debitis nostrum numquam odio nam itaque temporibus autem aperiam. Rerum eveniet tempore culpa repudiandae, facere consequatur necessitatibus similique nesciunt vel dolorem temporibus et dolor facilis in consequuntur excepturi autem voluptatum illo asperiores, id quisquam at. Cupiditate a alias, voluptatem illo nulla, laborum minima. Molestias qui, suscipit facilis! Odio placeat consectetur et quaerat culpa, expedita esse, error sapiente deleniti porro iste autem in quidem saepe, consequuntur voluptatem laudantium corporis harum modi? Deserunt labore sit laudantium incidunt dolore sed quos ad nulla maiores facere voluptatem, fugiat aperiam laborum dicta, asperiores fugit quidem commodi nobis perferendis corrupti odio. Sed corrupti dolor officia consequatur modi laudantium obcaecati, praesentium mollitia maxime voluptatibus ex molestiae, ipsum blanditiis, incidunt esse ad quae consequuntur cupiditate nostrum cum unde dignissimos! Sapiente, cupiditate assumenda, eligendi cumque mollitia suscipit perferendis quis esse dolor, nesciunt hic quibusdam harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, odio, asperiores.</p>
                       </div>
                       <div id="req_res" role="tabpanel" class="tab-pane fade">
-                        <p>lorem</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem reprehenderit deserunt obcaecati ab quibusdam reiciendis repellendus eum earum explicabo unde quod quis, dolor quae excepturi et adipisci incidunt dolorem magnam minima laboriosam autem! Voluptatem sapiente quaerat minus reiciendis maxime esse iusto tempore nesciunt quas unde corporis rem, assumenda, temporibus laboriosam, aut, officiis accusantium eum? Dicta illo non iste vel est commodi laborum voluptatum totam sunt, harum veritatis distinctio, magni corporis asperiores! Commodi perspiciatis, ipsam recusandae, alias amet impedit praesentium aliquam quasi culpa, eveniet, saepe laborum! Autem nesciunt quod pariatur, voluptatibus deserunt modi iure! Ad suscipit molestiae itaque neque illo corrupti nobis aliquam, fugiat explicabo eum aspernatur, incidunt iure ipsa asperiores rerum tenetur. Cupiditate et optio modi inventore numquam nobis eligendi delectus unde eum assumenda explicabo, labore provident, alias animi accusantium excepturi reprehenderit perferendis quod adipisci cum libero. Inventore consequatur vitae, numquam soluta magnam laudantium, sint eaque nulla ipsum nostrum fugiat quo optio minima cumque at, velit hic iste labore. Repellendus illum eaque explicabo molestiae qui neque nemo dolorem, dolores, reprehenderit, maiores eum voluptatibus quas accusamus alias asperiores voluptatem cupiditate natus sint fugiat reiciendis laboriosam dolor mollitia fuga. Illo commodi, ipsum repudiandae, optio minima ab sapiente facilis eligendi omnis laudantium quos repellat porro voluptas rem delectus, possimus tenetur quidem deserunt maxime doloremque itaque. Obcaecati tempore incidunt nesciunt omnis quos! Quod dolorem, sunt unde sapiente temporibus ea, deleniti esse dicta nesciunt? Cumque, neque? Cupiditate consequuntur ducimus dicta, sed quaerat provident accusamus eveniet. Fugit perferendis odit vitae alias debitis aspernatur voluptas consequuntur provident iusto quibusdam. Enim, ex accusantium velit distinctio odit! Fugiat ducimus quam beatae officiis neque molestiae, corrupti provident est optio maiores porro doloremque magni. Iusto quae cupiditate nesciunt aspernatur labore explicabo id aliquid sunt sint nemo, minus quidem odio sit eligendi obcaecati maiores animi. Veritatis, quae, porro. Repellendus blanditiis consectetur consequuntur, qui sapiente iste laudantium repudiandae dolorum, nemo quia aut quos perspiciatis maiores illum, voluptatum est omnis ipsum. Rerum, unde cupiditate inventore.</p>
                       </div>
                     </div>
                   </div>
@@ -266,9 +287,69 @@
         </div>
       </div>
       <!--#########################-->
-      <div class="centering">
-        <p>Ранее </p>
-        <p>Вы смотрели</p>
+      <div class="centering myCarusel">
+        <p class="myCarusel-header">Ранее </p>
+        <p class="myCarusel-header-sub">Вы смотрели</p>
+        <div class="jcarousel-wrapper">
+          <div class="jcarousel">
+            <ul class="jcarousel-list">
+              <li class="jcarousel-item"><img src="images/slider/pic16.jpg" alt="0" class="jcarousel-item-image">
+                <div class="jcarousel-item-description"><a href="#" class="jcarousel-item-name">Стяжной ремень 1.5 тн</a>
+                  <div class="jcarousel-item-price"><span class="jcarousel-item-price-from">от</span><span class="jcarousel-item-price-quantity">15.34</span><sup class="jcarousel-item-price-currency">грн/шт. </sup><span class="hiddenvar">0</span></div>
+                  <div class="text-success jcarousel-item-status">на складе</div>
+                </div>
+              </li>
+              <li class="jcarousel-item"><img src="images/slider/pic15.jpg" alt="1" class="jcarousel-item-image">
+                <div class="jcarousel-item-description"><a href="#" class="jcarousel-item-name">Звено соеденительное европейское типа G80...</a>
+                  <div class="jcarousel-item-price"><span class="jcarousel-item-price-from">от</span><span class="jcarousel-item-price-quantity">8.17</span><sup class="jcarousel-item-price-currency">грн/шт. </sup><span class="hiddenvar">1</span></div>
+                  <div class="text-success jcarousel-item-status">на складе</div>
+                </div>
+              </li>
+              <li class="jcarousel-item"><img src="images/slider/pic14.jpg" alt="2" class="jcarousel-item-image">
+                <div class="jcarousel-item-description"><a href="#" class="jcarousel-item-name">Скобка такелажная омегообразная тип...</a>
+                  <div class="jcarousel-item-price"><span class="jcarousel-item-price-from">от</span><span class="jcarousel-item-price-quantity">28.79</span><sup class="jcarousel-item-price-currency">грн/шт. </sup><span class="hiddenvar">2</span></div>
+                  <div class="text-success jcarousel-item-status">на складе</div>
+                </div>
+              </li>
+              <li class="jcarousel-item"><img src="images/slider/pic13.jpg" alt="3" class="jcarousel-item-image">
+                <div class="jcarousel-item-description"><a href="#" class="jcarousel-item-name">Захват горизонтальный типа DHQ</a>
+                  <div class="jcarousel-item-price"><span class="jcarousel-item-price-from">от</span><span class="jcarousel-item-price-quantity">15.34</span><sup class="jcarousel-item-price-currency">грн/шт. </sup><span class="hiddenvar">3</span></div>
+                  <div class="text-success jcarousel-item-status">на складе</div>
+                </div>
+              </li>
+              <li class="jcarousel-item"><img src="images/slider/pic12.jpg" alt="4" class="jcarousel-item-image">
+                <div class="jcarousel-item-description"><a href="#" class="jcarousel-item-name">Стальной канат ГОСТ 3077-80</a>
+                  <div class="jcarousel-item-price"><span class="jcarousel-item-price-from">от</span><span class="jcarousel-item-price-quantity">5.34</span><sup class="jcarousel-item-price-currency">грн/шт. </sup><span class="hiddenvar">4</span></div>
+                  <div class="text-success jcarousel-item-status">на складе</div>
+                </div>
+              </li>
+              <li class="jcarousel-item"><img src="images/slider/pic11.jpg" alt="5" class="jcarousel-item-image">
+                <div class="jcarousel-item-description"><a href="#" class="jcarousel-item-name">Строп текстильний двухветвевой (2СТ)</a>
+                  <div class="jcarousel-item-price"><span class="jcarousel-item-price-from">от</span><span class="jcarousel-item-price-quantity">90.85</span><sup class="jcarousel-item-price-currency">грн/шт. </sup><span class="hiddenvar">5</span></div>
+                  <div class="text-success jcarousel-item-status">на складе</div>
+                </div>
+              </li>
+              <li class="jcarousel-item"><img src="images/slider/pic16.jpg" alt="6" class="jcarousel-item-image">
+                <div class="jcarousel-item-description"><a href="#" class="jcarousel-item-name">Скобка такелажная омегообразная тип...</a>
+                  <div class="jcarousel-item-price"><span class="jcarousel-item-price-from">от</span><span class="jcarousel-item-price-quantity">28.79</span><sup class="jcarousel-item-price-currency">грн/шт. </sup><span class="hiddenvar">6</span></div>
+                  <div class="text-success jcarousel-item-status">на складе</div>
+                </div>
+              </li>
+              <li class="jcarousel-item"><img src="images/slider/pic13.jpg" alt="7" class="jcarousel-item-image">
+                <div class="jcarousel-item-description"><a href="#" class="jcarousel-item-name">Захват горизонтальный типа DHQ</a>
+                  <div class="jcarousel-item-price"><span class="jcarousel-item-price-from">от</span><span class="jcarousel-item-price-quantity">15.34</span><sup class="jcarousel-item-price-currency">грн/шт. </sup><span class="hiddenvar">7</span></div>
+                  <div class="text-success jcarousel-item-status">на складе</div>
+                </div>
+              </li>
+              <li class="jcarousel-item"><img src="images/slider/pic15.jpg" alt="8" class="jcarousel-item-image">
+                <div class="jcarousel-item-description"><a href="#" class="jcarousel-item-name">Стяжной ремень 1.5 тн</a>
+                  <div class="jcarousel-item-price"><span class="jcarousel-item-price-from">от</span><span class="jcarousel-item-price-quantity">8.17</span><sup class="jcarousel-item-price-currency">грн/шт. </sup><span class="hiddenvar">8</span></div>
+                  <div class="text-success jcarousel-item-status">на складе</div>
+                </div>
+              </li>
+            </ul>
+          </div><a href="#" class="jcarousel-control-prev"><i class="glyphicon glyphicon-chevron-left"></i></a><a href="#" class="jcarousel-control-next"><i class="glyphicon glyphicon-chevron-right"> </i></a>
+        </div>
       </div>
       <!--##########################-->
       <footer class="row">
@@ -304,22 +385,25 @@
             </div>
             <address class="contacts-address"><i class="fa fa-map-marker fa-lg contacts-icon"></i><span class="contacts-phones-str"> Украина, г.Кривой Рог, ул.Ленина, 1 оф. 315</span></address>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 subscribe">
             <div class="subs">
-              <p class="subs-title">Хотите получать свежие акции и предложения?</p>
               <form action="" class="form">
-                <div class="input-group">
-                  <div class="input-group-btn">
-                    <button class="btn btn-default"><i aria-hidden="true" class="fa fa-envelope-o"></i></button>
+                <div class="input-group subs-input-group">
+                  <label class="control-label subs-title">Хотите получать свежие акции и предложения?</label>
+                  <div class="input-group subs-input-group"><span class="input-group-addon subs-ico"><i aria-hidden="true" class="fa fa-envelope-o"></i></span>
+                    <input type="text" aria-label="Email" placeholder="Ваша електроная почта" class="form-control"><span class="input-group-addon subs-wrapper-btn">
+                      <button class="btn btn-warning subs-btn">Подписаться</button></span>
                   </div>
-                  <input type="email" placeholder="Ваша эл.почта" name="useremail" class="form-control">
-                  <div class="input-group-btn">
-                    <button class="btn btn-warning subs-btn">Подписаться</button>
-                  </div>
+                  <!--.input-group-btn
+                  button.btn.btn-default
+                  	i.fa.fa-envelope-o(aria-hidden="true")
+                  -->
+                  <!--input.form-control(type="email", placeholder='Ваша эл.почта', name='useremail')-->
+                  <!--.input-group-btnbutton.btn.btn-warning.subs-btn Подписаться
+                  -->
                 </div>
               </form>
-            </div><a href="#">
-              <button class="btn btn-info btn-to-top"><i class="glyphicon glyphicon-chevron-up btn-to-top-icon"></i><span>Наверх</span></button></a>
+            </div><a class="btn btn-info btn-to-top"><i class="glyphicon glyphicon-chevron-up btn-to-top-icon"><span>Наверх</span></i></a>
           </div>
         </div>
       </footer>
@@ -336,6 +420,8 @@
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/jquery-form-styler/jquery.formstyler.min.js"></script>
+    <script src="bower_components/jcarousel/dist/jquery.jcarousel.js"></script>
+    <script src="bower_components/ion.rangeSlider/js/ion.rangeSlider.js"></script>
     <!--endbower-->
     <!--endbuild-->
     <!--build:js js/main.js-->

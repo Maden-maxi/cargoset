@@ -24,20 +24,25 @@ footer.row
 			address.contacts-address
 				i.fa.fa-map-marker.fa-lg.contacts-icon
 				span.contacts-phones-str  Украина, г.Кривой Рог, ул.Ленина, 1 оф. 315
-		.col-md-4
+		.col-md-4.subscribe
 			div.subs
-				p.subs-title Хотите получать свежие акции и предложения?
 				form(action="").form
-					.input-group
-						.input-group-btn
+					.input-group.subs-input-group
+						label.control-label.subs-title Хотите получать свежие акции и предложения?
+						.input-group.subs-input-group
+							span.input-group-addon.subs-ico: i.fa.fa-envelope-o(aria-hidden="true")
+							input(type="text", aria-label="Email" placeholder='Ваша електроная почта').form-control
+							span.input-group-addon.subs-wrapper-btn
+								button.btn.btn-warning.subs-btn Подписаться
+
+						//.input-group-btn
 							button.btn.btn-default
 								i.fa.fa-envelope-o(aria-hidden="true")
-						input.form-control(type="email", placeholder='Ваша эл.почта', name='useremail')
-						.input-group-btn
+						//input.form-control(type="email", placeholder='Ваша эл.почта', name='useremail')
+						//.input-group-btn
 							button.btn.btn-warning.subs-btn Подписаться
-			a(href="#")
-				button.btn.btn-info.btn-to-top
-					i.glyphicon.glyphicon-chevron-up.btn-to-top-icon
+			a.btn.btn-info.btn-to-top
+				i.glyphicon.glyphicon-chevron-up.btn-to-top-icon
 					span Наверх
 .row
 	.centering.copyright
