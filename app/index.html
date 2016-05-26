@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Создание сайтов">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/	jquery-ui.css">
+    <!--build:css css/vendor.css-->
+    <!--bower:css-->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/icomoon-bower/style.css" />
+    <link rel="stylesheet" href="bower_components/jquery-form-styler/jquery.formstyler.css" />
+    <!--endbower-->
+    <!--endbuild-->
+    <!--build:css css/main.css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--endbuild -->
+    <title>CargoSet</title>
+  </head>
+  <body>
+    <div class="container-fluid wrapper">
+      <div class="header">
+        <nav class="navbar navbar-default navbar-static-top nav-top">
+          <div class="centering">
+            <!--.navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#responsive-menu')
+            	span.sr-only Toggle navigation
+            	.icon-bar
+            	.icon-bar
+            	.icon-bar
+            -->
+            <div id="responsive-menu" class="collapse navbar-collapse navbar-left">
+              <ul class="nav navbar-nav top-menu">
+                <li><a href="#production" class="nav-link">Производство</a></li>
+                <li><a href="#delivery" class="nav-link">Достаква и оплата</a></li>
+                <li><a href="#worranty" class="nav-link">Гарантия</a></li>
+                <li><a href="#statments" class="nav-link">Статьи</a></li>
+                <li><a href="#contacts" class="nav-link">Контакты</a></li>
+              </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-left top-menu-center">
+              <li><a href="#"><span class="btn btn-primary">Бесплатная доставка</span></a></li>
+              <li><a><span class="ukrdev">всей Украине при заказе от 1000грн.</span></a></li>
+              <li><a href="#"><span class="text-primary">Подробнее</span></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="icon icon-user-plus"></span><span> Регистрация</span></a></li>
+              <li><a href="#"><span class="icon icon-lock"></span><span>Вход</span></a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="row">
+          <div class="centering">
+            <div class="col-xs-12 col-md-3"><img src="images/logo-cargoset.png" class="logo img-responsive"></div>
+            <div class="col-xs-12 col-md-3 contact-phones"><i class="fa fa-phone fa-lg"></i>
+              <div class="select"><a id="recall">Перезвоните мне</a>
+                <select id="phones">
+                  <option>(095) 204 80 14</option>
+                  <option>(050) 254 81 15</option>
+                  <option>(055) 254 82 14</option>
+                  <option>(068) 254 86 13</option>
+                </select>
+                <!--.dropdown
+                button.btn.btn-default.dropdown-toggle(type='button', id='dropdown-phones', data-toggle='dropdown', aria-expanded='false')
+                	span (095) 254 86 18
+                	span.caret
+                ul.dropdown-menu(aria-labelledby="dropdownMenu2")
+                	li: a(href="#") (097) 123 45 67
+                	li: a(href="#") (050) 123 45 68
+                	li: a(href="#") (068) 124 65 75
+                -->
+              </div><span class="work-grafic">Сегодня работаем<br>9:00 - 18:00</span>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <form action="" role="search" class="form">
+                <div class="input-group">
+                  <input type="text" name="search" placeholder="Поиск по сайту" aria-describedby="icon-search" class="form-control"><span id="icon-search" class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button></span>
+                </div>
+              </form>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <ul class="action">
+                <li class="action-wrapper"><i class="icon-star-empty"></i>
+                  <ul class="actions">
+                    <li class="actions-name">Избрание</li>
+                    <li class="actions-quantity">нет товаров</li>
+                  </ul>
+                </li>
+                <li class="action-wrapper"><i class="icon-cart"></i>
+                  <ul class="actions">
+                    <li class="actions-name">Корзина</li>
+                    <li class="actions-quantity">нет товаров</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ###########################-->
+      <!-- content-->
+      <div class="centering">
+        <div class="content row">
+          <ol class="breadcrumb">
+            <li><a href="#" class="btn btn-primary"><i class="glyphicon glyphicon-menu-hamburger"></i><span>Каталог товаров</span></a></li>
+            <li><a href="#">Стропы грузоподемные</a></li>
+            <li class="active">Канатные</li>
+          </ol>
+          <h3 class="product-name">Строп канатный петлевой</h3>
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12 col-md-9">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="imagebox"><img src="images/product.png" alt="prod"></div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="row">
+                      <div class="col-md-6 weight">
+                        <h4 class="stat-header">Грузоподьемность <sup><i class='glyphicon glyphicon-info-sign'></i></sup></h4>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="weight-select">
+                              <select id="weight" name="weight">
+                                <option>1.25 тн</option>
+                                <option selected="selected">1.50 тн</option>
+                                <option>1.75 тн</option>
+                                <option>2.00 тн</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="weight-block"><span class="weight-articul">Артикул</span><span class="weight-number">01-020175</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="number-plus-minus length">
+                          <h4 for="length" class="stat-header">Длина, мм <sup><i class='glyphicon glyphicon-info-sign'></i></sup></h4>
+                          <input type="number" min="10" max="2000" step="10" name="length" id="length" readonly>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <p class="price">15205.24<sup>грн/шт</sup></p><span>в наличии</span>
+                      </div>
+                      <div class="col-md-8">
+                        <form class="form">
+                          <input type="number">
+                          <button type="submit" class="btn btn-success">Добавить в корзину</button>
+                          <button type="submit" class="btn btn-primary">Купить в один клик</button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="row characteristics">
+                      <h3>Характеристики</h3>
+                      <div class="col-md-6">
+                        <dl>
+                          <dt>Материал</dt>
+                          <dd>светлые канаты без покрытия ГОСТ-7668-80, 2688-80</dd>
+                          <dt>Коэффициент запаса прочности</dt>
+                          <dd>6.1</dd>
+                          <dt>Температурный диапазон применения</dt>
+                          <dd>от -40 до +100 С°</dd>
+                        </dl>
+                      </div>
+                      <div class="col-md-6">
+                        <dl>
+                          <dt>Стандарт</dt>
+                          <dd>ДСТУ EN 13414-1:2014, ДСТУ Б В.2.8-10-98</dd>
+                          <dt>Зделка концов каната</dt>
+                          <dd>заплётка либо опрессовка в алюминиевую втулку</dd>
+                          <dt>Гарантия</dt>
+                          <dd>3 месяца</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 product">
+                    <h3 class="product-list-header">Сопутствующие товары</h3>
+                    <ul class="product-list">
+                      <li class="product-list-wrapper"><a href="#" class="product-list-link"><img src="images/thumbs/pic2.jpg" alt="1" class="product-list-img"></a><a href="#" class="product-list-name">Стяжной ремень <br>1.5 тн</a><span class="product-list-price"><span class='product-list-price-quantity'>15.34 </span> <span class='product-list-price-peritem'>грн/шт.</span></span></li>
+                      <li class="product-list-wrapper"><a href="#" class="product-list-link"><img src="images/thumbs/pic1.jpg" alt="2" class="product-list-img"></a><a href="#" class="product-list-name">Стопор текстильний двухветевой (2СТ)</a><span class="product-list-price"><span class='product-list-price-quantity'>119.00 </span> <span class='product-list-price-peritem'>грн/шт.</span></span></li>
+                      <li class="product-list-wrapper"><a href="#" class="product-list-link"><img src="images/thumbs/pic3.jpg" alt="3" class="product-list-img"></a><a href="#" class="product-list-name">Стяжной ремень<br> 1.5 тн</a><span class="product-list-price"><span class='product-list-price-quantity'>90.85 </span> <span class='product-list-price-peritem'>грн/шт.</span></span></li>
+                      <li class="product-list-wrapper"><a href="#" class="product-list-link"><img src="images/thumbs/pic4.jpg" alt="4" class="product-list-img"></a><a href="#" class="product-list-name">Стальной канат ГОСТ 3077-80</a><span class="product-list-price"><span class='product-list-price-quantity'>119.00 </span> <span class='product-list-price-peritem'>грн/шт.</span></span></li>
+                      <li class="product-list-wrapper"><a href="#" class="product-list-link"><img src="images/thumbs/pic2.jpg" alt="5" class="product-list-img"></a><a href="#" class="product-list-name">Стяжной ремень<br> 1.5 тн</a><span class="product-list-price"><span class='product-list-price-quantity'>78.34 </span> <span class='product-list-price-peritem'>грн/шт.</span></span></li>
+                      <li class="product-list-wrapper"><a href="#" class="product-list-link"><img src="images/thumbs/pic1.jpg" alt="6" class="product-list-img"></a><a href="#" class="product-list-name">Стопор текстильний двухветевой (2СТ)</a><span class="product-list-price"><span class='product-list-price-quantity'>28.70 </span> <span class='product-list-price-peritem'>грн/шт.</span></span></li>
+                      <li class="product-list-wrapper"><a href="#" class="product-list-link"><img src="images/thumbs/pic2.jpg" alt="7" class="product-list-img"></a><a href="#" class="product-list-name">Стяжной ремень<br> 1.5 тн</a><span class="product-list-price"><span class='product-list-price-quantity'>15.34 </span> <span class='product-list-price-peritem'>грн/шт.</span></span></li>
+                      <li class="product-list-wrapper"><a href="#" class="product-list-link"><img src="images/thumbs/pic1.jpg" alt="8" class="product-list-img"></a><a href="#" class="product-list-name">Стопор текстильний двухветевой (2СТ)</a><span class="product-list-price"><span class='product-list-price-quantity'>119.00 </span> <span class='product-list-price-peritem'>грн/шт.</span></span></li>
+                      <li class="product-list-wrapper"><a href="#" class="product-list-link"><img src="images/thumbs/pic5.jpg" alt="9" class="product-list-img"></a><a href="#" class="product-list-name">Скобка такелажная омегообразного типа</a><span class="product-list-price"><span class='product-list-price-quantity'>15.34 </span> <span class='product-list-price-peritem'>грн/шт.</span></span></li>
+                    </ul>
+                  </div>
+                  <div class="col-xs-12 col-md-8 myTabs">
+                    <ul id="myTabs" role="tablist" class="nav nav-tabs">
+                      <li role="presentation" class="active"><a href="#all_stats" aria-controls="all_stats" role="tab" data-toggle="tab">Все характеристики</a></li>
+                      <li role="presentation"><a href="#stats" aria-controls="stats" role="tab" data-toggle="tab">Характеристики</a></li>
+                      <li role="presentation"><a href="#photos" aria-controls="photos" role="tab" data-toggle="tab">Фото</a></li>
+                      <li role="presentation"><a href="#videos" aria-controls="videos" role="tab" data-toggle="tab">Видео</a></li>
+                      <li role="presentation"><a href="#req_res" aria-controls="req_res" role="tab" data-toggle="tab">Вопросы и ответы</a></li>
+                    </ul>
+                    <div id="myTabsContent" class="tab-content">
+                      <div id="all_stats" role="tabpanel" class="tab-pane fade in active">
+                        <p> В России большинство грузоподъёмных операций проводят с использованием стальных канатных стропов – это строительно-монтажные и погрузочно-разгрузочные работы, подъём и перемещение грузов кранами при температуре от –40 до +400 °С.</p>
+                        <p>Стропы канатные изготавливают одноветвевые или многоветвевые (так называемые "пауки") со звеньями для навески на крюк крана или присоединения груза, а также кольцевые в виде замкнутой петли для непосредственной обвязки груза и петлевые (так называемые "чалки" или "удавки").</p>
+                        <h5><b>Наша компания изготавливает стропы канатные по ГОСТ 25573-82 и РД 10-33-93.</b></h5>
+                        <p>Для изготовления петлевых и кольцевых канатных стропов мы применяем канаты по ГОСТ 3079, ГОСТ 7668, ГОСТ 3071, пряди которых включают множество стальных проволок, в отличие от каната по ГОСТ 2688, что обеспечивает гибкость стропа и его более долгий срок службы. В основном, применяется канат чистый, без смазки. Заделка концов каната производится методом заплётки или обжимки алюминиевой втулкой. На стропы, изготовленные путём заплётки, производится заделка концов прядей по новым технологиям, с применением термоусадочной трубки. </p>
+                        <p>При изготовлении ветвевых стропов мы применяем импортные крюки типа 320А, они несколько меньше аналогичных отечественных крюков, но не уступают им в грузоподъемности. </p>
+                      </div>
+                      <div id="stats" role="tabpanel" class="tab-pane fade">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores tenetur voluptatem ex.</p>
+                      </div>
+                      <div id="photos" role="tabpanel" class="tab-pane fade">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore sed, rem neque in labore!</p>
+                      </div>
+                      <div id="videos" role="tabpanel" class="tab-pane fade">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, odio, asperiores.</p>
+                      </div>
+                      <div id="req_res" role="tabpanel" class="tab-pane fade">
+                        <p>lorem</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-3">
+                <ul class="info">
+                  <li class="info-item"><i class="fa fa-truck fa-lg"></i><span>Досатвка </span><sup><i class="glyphicon glyphicon-info-sign"></i></sup></li>
+                  <ul class="info-lvl-1 dlvr">
+                    <li class="info-item-1">По Украине
+                      <ul class="info-lvl-2">
+                        <li class="info-item-2">на склад службы перевозчика</li>
+                        <li class="info-item-2">курьером по адресу</li>
+                      </ul>
+                    </li>
+                    <li class="info-item-1">По Днепропетровску
+                      <ul class="info-lvl-2">
+                        <li class="info-item-2">самовывоз из точки выдачи</li>
+                        <li class="info-item-2">курьером по адресу</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <li class="info-item"><i class="fa fa-credit-card-alt fa-lg"></i><span>Оплата </span><sup><i class="glyphicon glyphicon-info-sign"></i></sup>
+                    <p>Наличными, Безналичными, Visa/Mastercard</p>
+                  </li>
+                  <li class="info-item"><i class="fa fa-shield fa-lg"></i><span>Гарантия </span><sup><i class="glyphicon glyphicon-info-sign"></i></sup>
+                    <ul class="info-lvl-1">
+                      <li class="info-item-1">обмен/возврат товара в течении 14 дней</li>
+                      <li class="info-item-1">официальная гарантия от 6 месяцев</li>
+                      <li class="info-item-1">оригинальная продукция</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--#########################-->
+      <div class="centering">
+        <p>Ранее </p>
+        <p>Вы смотрели</p>
+      </div>
+      <!--##########################-->
+      <footer class="row">
+        <div class="centering">
+          <h4>Каталог товаров</h4>
+          <div class="col-md-2">
+            <ul>
+              <li><a href="#">Канаты, Тросы</a></li>
+              <li><a href="#">Стропы грузоподъемочные</a></li>
+              <li><a href="#">Комплектующие для строп</a></li>
+              <li><a href="#">Средства Крепления грузов</a></li>
+              <li><a href="#">Такелаж</a></li>
+              <li><a href="#">МТМ, Блоки, Лебедки</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul>
+              <li><a href="#">Тали, Тележки</a></li>
+              <li><a href="#">Захваты, Траверсы</a></li>
+              <li><a href="#">Цепи в ассортименте</a></li>
+              <li><a href="#">Трубы стальные</a></li>
+              <li><a href="#">Складское оборудование</a></li>
+              <li><a href="#">Средства защиты</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 contacts">
+            <div class="contacts-phones"><i class="fa fa-phone fa-lg contacts-icon"></i>
+              <ul class="contacts-list-phones">
+                <li class="contacts-phone">(097) 123-45-78</li>
+                <li class="contacts-phone">(050) 123-45-78</li>
+                <li class="contacts-phone">(063) 123-45-78</li>
+              </ul>
+            </div>
+            <address class="contacts-address"><i class="fa fa-map-marker fa-lg contacts-icon"></i><span class="contacts-phones-str"> Украина, г.Кривой Рог, ул.Ленина, 1 оф. 315</span></address>
+          </div>
+          <div class="col-md-4">
+            <div class="subs">
+              <p class="subs-title">Хотите получать свежие акции и предложения?</p>
+              <form action="" class="form">
+                <div class="input-group">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default"><i aria-hidden="true" class="fa fa-envelope-o"></i></button>
+                  </div>
+                  <input type="email" placeholder="Ваша эл.почта" name="useremail" class="form-control">
+                  <div class="input-group-btn">
+                    <button class="btn btn-warning subs-btn">Подписаться</button>
+                  </div>
+                </div>
+              </form>
+            </div><a href="#">
+              <button class="btn btn-info btn-to-top"><i class="glyphicon glyphicon-chevron-up btn-to-top-icon"></i><span>Наверх</span></button></a>
+          </div>
+        </div>
+      </footer>
+      <div class="row">
+        <div class="centering copyright">
+          <div class="copy">&copy; 2016 ООО <q>Каргосет</q></div>
+          <div class="aliace">Разработка интернет-магазина - <a href='#'>Флаберс</a></div>
+        </div>
+      </div>
+    </div>
+    <!--build:js js/vendor.js-->
+    <!--bower:js-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jquery-form-styler/jquery.formstyler.min.js"></script>
+    <!--endbower-->
+    <!--endbuild-->
+    <!--build:js js/main.js-->
+    <script src="js/main.js"></script>
+    <script src="js/plugins.js"></script>
+    <!--endbuild-->
+  </body>
+</html>

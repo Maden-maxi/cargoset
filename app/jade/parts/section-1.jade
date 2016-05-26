@@ -1,0 +1,118 @@
+.row
+	.col-md-4
+		.imagebox
+			img(src="images/product.png", alt="prod")
+	.col-md-8
+		.row
+			.col-md-6.weight
+				h4.stat-header!= "Грузоподьемность <sup><i class='glyphicon glyphicon-info-sign'></i></sup>"
+				.row
+					.col-md-6
+						div.weight-select
+							select#weight(name="weight")
+								option 1.25 тн
+								option(selected='selected') 1.50 тн
+								option 1.75 тн
+								option 2.00 тн
+					.col-md-6
+						div.weight-block
+							span.weight-articul Артикул
+							span.weight-number 01-020175
+			.col-md-6
+				.number-plus-minus.length
+					h4.stat-header(for="length")!= "Длина, мм <sup><i class='glyphicon glyphicon-info-sign'></i></sup>"
+					input(type="number", min="10", max="2000",  step="10",name="length", id="length", readonly)
+		.row
+			.col-md-4
+				p.price!= "15205.24<sup>грн/шт</sup>"
+				span в наличии
+			.col-md-8
+				form.form
+					input(type="number")
+					button.btn.btn-success(type="submit") Добавить в корзину
+					button.btn.btn-primary(type="submit") Купить в один клик
+		.row.characteristics
+			h3 Характеристики
+			.col-md-6
+				dl
+					dt Материал
+					dd светлые канаты без покрытия ГОСТ-7668-80, 2688-80
+					dt Коэффициент запаса прочности
+					dd 6.1
+					dt Температурный диапазон применения
+					dd от -40 до +100 С°
+			.col-md-6
+				dl
+					dt Стандарт
+					dd ДСТУ EN 13414-1:2014, ДСТУ Б В.2.8-10-98
+					dt Зделка концов каната
+					dd заплётка либо опрессовка в алюминиевую втулку
+					dt Гарантия
+					dd 3 месяца
+.row
+	.col-md-4.product
+		h3.product-list-header Сопутствующие товары
+		ul.product-list
+			li.product-list-wrapper
+				a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/pic2.jpg", alt="1")
+				a(href="#").product-list-name!= "Стяжной ремень <br>1.5 тн"
+				span.product-list-price!= "<span class='product-list-price-quantity'>15.34 </span> <span class='product-list-price-peritem'>грн/шт.</span>"
+			li.product-list-wrapper
+				a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/pic1.jpg", alt="2")
+				a(href="#").product-list-name Стопор текстильний двухветевой (2СТ)
+				span.product-list-price!= "<span class='product-list-price-quantity'>119.00 </span> <span class='product-list-price-peritem'>грн/шт.</span>"
+			li.product-list-wrapper
+				a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/pic3.jpg", alt="3")
+				a(href="#").product-list-name!= "Стяжной ремень<br> 1.5 тн"
+				span.product-list-price!= "<span class='product-list-price-quantity'>90.85 </span> <span class='product-list-price-peritem'>грн/шт.</span>"
+			li.product-list-wrapper
+				a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/pic4.jpg", alt="4")
+				a(href="#").product-list-name Стальной канат ГОСТ 3077-80
+				span.product-list-price!= "<span class='product-list-price-quantity'>119.00 </span> <span class='product-list-price-peritem'>грн/шт.</span>"
+			li.product-list-wrapper
+				a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/pic2.jpg", alt="5")
+				a(href="#").product-list-name!= "Стяжной ремень<br> 1.5 тн"
+				span.product-list-price!= "<span class='product-list-price-quantity'>78.34 </span> <span class='product-list-price-peritem'>грн/шт.</span>"
+			li.product-list-wrapper
+				a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/pic1.jpg", alt="6")
+				a(href="#").product-list-name Стопор текстильний двухветевой (2СТ)
+				span.product-list-price!= "<span class='product-list-price-quantity'>28.70 </span> <span class='product-list-price-peritem'>грн/шт.</span>"
+			li.product-list-wrapper
+				a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/pic2.jpg", alt="7")
+				a(href="#").product-list-name!= "Стяжной ремень<br> 1.5 тн"
+				span.product-list-price!= "<span class='product-list-price-quantity'>15.34 </span> <span class='product-list-price-peritem'>грн/шт.</span>"
+			li.product-list-wrapper
+				a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/pic1.jpg", alt="8")
+				a(href="#").product-list-name Стопор текстильний двухветевой (2СТ)
+				span.product-list-price!= "<span class='product-list-price-quantity'>119.00 </span> <span class='product-list-price-peritem'>грн/шт.</span>"
+			li.product-list-wrapper
+				a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/pic5.jpg", alt="9")
+				a(href="#").product-list-name Скобка такелажная омегообразного типа
+				span.product-list-price!= "<span class='product-list-price-quantity'>15.34 </span> <span class='product-list-price-peritem'>грн/шт.</span>"
+	.col-xs-12.col-md-8.myTabs
+		ul.nav.nav-tabs#myTabs(role="tablist")
+			li.active(role="presentation"): a(href="#all_stats" aria-controls="all_stats", role="tab", data-toggle="tab") Все характеристики
+			li(role="presentation"): a(href="#stats" aria-controls="stats", role="tab", data-toggle="tab") Характеристики
+			li(role="presentation"): a(href="#photos" aria-controls="photos", role="tab", data-toggle="tab") Фото
+			li(role="presentation"): a(href="#videos" aria-controls="videos", role="tab", data-toggle="tab") Видео
+			li(role="presentation"): a(href="#req_res" aria-controls="req_res", role="tab", data-toggle="tab") Вопросы и ответы
+		.tab-content#myTabsContent
+			.tab-pane.fade.in.active#all_stats(role="tabpanel")
+				p  В России большинство грузоподъёмных операций проводят с использованием стальных канатных стропов – это строительно-монтажные и погрузочно-разгрузочные работы, подъём и перемещение грузов кранами при температуре от –40 до +400 °С.
+
+				p Стропы канатные изготавливают одноветвевые или многоветвевые (так называемые "пауки") со звеньями для навески на крюк крана или присоединения груза, а также кольцевые в виде замкнутой петли для непосредственной обвязки груза и петлевые (так называемые "чалки" или "удавки").
+
+				h5: b Наша компания изготавливает стропы канатные по ГОСТ 25573-82 и РД 10-33-93.
+
+				p Для изготовления петлевых и кольцевых канатных стропов мы применяем канаты по ГОСТ 3079, ГОСТ 7668, ГОСТ 3071, пряди которых включают множество стальных проволок, в отличие от каната по ГОСТ 2688, что обеспечивает гибкость стропа и его более долгий срок службы. В основном, применяется канат чистый, без смазки. Заделка концов каната производится методом заплётки или обжимки алюминиевой втулкой. На стропы, изготовленные путём заплётки, производится заделка концов прядей по новым технологиям, с применением термоусадочной трубки. 
+
+				p При изготовлении ветвевых стропов мы применяем импортные крюки типа 320А, они несколько меньше аналогичных отечественных крюков, но не уступают им в грузоподъемности. 
+
+			.tab-pane.fade#stats(role="tabpanel")
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores tenetur voluptatem ex.
+			.tab-pane.fade#photos(role="tabpanel")
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore sed, rem neque in labore!
+			.tab-pane.fade#videos(role="tabpanel")
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, odio, asperiores.
+			.tab-pane.fade#req_res(role="tabpanel")
+				p lorem

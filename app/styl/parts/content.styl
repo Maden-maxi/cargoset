@@ -35,44 +35,42 @@
 	border 1px solid #f2f2f1
 	img
 		margin auto
-.product-list
+.product
 	@media screen and (max-width: 1024px)
 		display none
-	&-header
-		@media screen and (max-width: 1024px)
-			display none
-	margin 0
-	padding 0
-	list-style-type none
-	&-wrapper
-		display flex
-		justify-content space-between
-		align-items center
-		border-bottom 1px solid #f2f2f1
-		&:last-child
-			border none
-	&-img
-		width 61px
-		height 61px
-	&-name
-		font-conf(#0e4f97, robreg, 13px)
-		padding 10px
-		flex 1
-	&-price
-		display flex
-		align-items center
-		flex-flow column nowrap
-		background #fff9e8
-		padding 5px
-		width 72px
-		height 42px
-		border-radius 2px
-		margin-right 10px
-		margin-left 20px
-		&-quantity
-			font-conf(#212121, rblack, 16px)
-		&-preitem
-			font-conf(#212121, robreg, 13.5px)
+	&-list
+		margin 0
+		padding 0
+		list-style-type none
+		&-wrapper
+			display flex
+			justify-content space-between
+			align-items center
+			border-bottom 1px solid #f2f2f1
+			&:last-child
+				border none
+		&-img
+			width 61px
+			height 61px
+		&-name
+			font-conf(#0e4f97, robreg, 13px)
+			padding 10px
+			flex 1
+		&-price
+			display flex
+			align-items center
+			flex-flow column nowrap
+			background #fff9e8
+			padding 5px
+			width 72px
+			height 42px
+			border-radius 2px
+			margin-right 10px
+			margin-left 20px
+			&-quantity
+				font-conf(#212121, rblack, 16px)
+			&-preitem
+				font-conf(#212121, robreg, 13.5px)
 .stat-header
 	font-conf(#212121, robreg, 15px)
 .weight
@@ -98,14 +96,20 @@
 		top -1.5em
 .price + span
 	font-conf(#1c9708, rlight, 13px)
-.charakteristiks
-	font-conf(#212121, robold, 16px)
-	margin 0 15px
-dl
-	dt
-		font-conf(#212121, robold, 13px)
-	dd
-		font-conf(#515151, robreg, 13px)
+.characteristics
+	@media screen and (max-width: 1024px)
+		display none
+	h3
+		font-conf(#212121, robold, 16px)
+		margin 0 15px
+	dl
+		dt
+			font-conf(#212121, robold, 13px)
+		dd
+			font-conf(#515151, robreg, 13px)
+.myTabs
+	@media screen and (max-width: 1024px)
+		width 100%
 #myTabs
 	a[role=tab]
 		margin 0

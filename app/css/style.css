@@ -74,20 +74,15 @@
 .imagebox img {
   margin: auto;
 }
+@media screen and (max-width: 1024px) {
+  .product {
+    display: none;
+  }
+}
 .product-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-@media screen and (max-width: 1024px) {
-  .product-list {
-    display: none;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .product-list-header {
-    display: none;
-  }
 }
 .product-list-wrapper {
   display: -webkit-box;
@@ -190,18 +185,28 @@
   color: #1c9708 !important;
   font: 13px 'RobotoLight', sans-serif;
 }
-.charakteristiks {
+@media screen and (max-width: 1024px) {
+  .characteristics {
+    display: none;
+  }
+}
+.characteristics h3 {
   color: #212121 !important;
   font: 16px 'RobotoBold', sans-serif;
   margin: 0 15px;
 }
-dl dt {
+.characteristics dl dt {
   color: #212121 !important;
   font: 13px 'RobotoBold', sans-serif;
 }
-dl dd {
+.characteristics dl dd {
   color: #515151 !important;
   font: 13px 'RobotoRegular', sans-serif;
+}
+@media screen and (max-width: 1024px) {
+  .myTabs {
+    width: 100%;
+  }
 }
 #myTabs a[role=tab] {
   margin: 0;

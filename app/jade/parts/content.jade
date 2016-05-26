@@ -1,6 +1,6 @@
 // content
 .centering
-	.content
+	.content.row
 		ol.breadcrumb
 			li: a.btn.btn-primary(href="#")
 				i.glyphicon.glyphicon-menu-hamburger
@@ -8,8 +8,9 @@
 			li: a(href="#") Стропы грузоподемные
 			li.active Канатные
 		h3.product-name Строп канатный петлевой
-		.row
-			.col-xs-12.col-md-9
-				include ./product.jade
-			.col-xs-12.col-md-3
-				include ./sidebar.jade
+		.col-xs-12
+			.row
+				.col-xs-12.col-md-9
+					include ./section-1.jade
+				.col-xs-12.col-md-3
+					include ./sidebar.jade
