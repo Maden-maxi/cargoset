@@ -799,6 +799,7 @@ footer ul li a {
   font: 24px/27px Arial, sans-serif;
   border-radius: 0px;
   box-shadow: 0 0 4px #f0efe7;
+  cursor: pointer;
 }
 .jcarousel-control-prev.inactive,
 .jcarousel-control-next.inactive {

@@ -1,4 +1,4 @@
-//"use strict";
+"use strict";
 var gulp = require('gulp');
 
 //jade
@@ -55,20 +55,39 @@ gulp.task('bower', function () {
 gulp.task('watch:bower', function () {
   gulp.watch('bower.json', ['bower']);
 });
-/*
+//image 
+var tinypng = require('gulp-tinypng-compress');
+ 
+gulp.task('tinypng', function () {
+    gulp.src('app/images/**/*.{png,jpg,jpeg}')
+        .pipe(tinypng({
+            key: 'API_KEY',
+            log: true
+        }))
+        .pipe(gulp.dest('dist/images'));
+});
+//fonts
+var cssfont64 = require('gulp-cssfont64');
+ 
+gulp.task('fonts', function () {
+    gulp.src('app/fonts/*.ttf')
+        .pipe(cssfont64())
+        .pipe(gulp.dest('dist/fonts'));
+});
+//deploy
 var useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     cleanCss = require('gulp-clean-css');
  
 gulp.task('html', function () {
-    return gulp.src('../src/*.html')
+    return gulp.src('app/*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', cleanCss()))
-        .pipe(gulp.dest('../build'));
+        .pipe(gulp.dest('dist'));
 });
-*/
+
 gulp.task('watch', function() {
    gulp.watch('./app/**/*.jade', ['jade']); 
    gulp.watch('./app/**/*.styl', ['stylus']);
