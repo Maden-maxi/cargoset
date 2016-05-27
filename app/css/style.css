@@ -156,6 +156,7 @@
 }
 .length .irs-single {
   background: #f89b2a;
+  display: none;
 }
 .length .irs-single::after {
   border-top-color: #f89b2a;
@@ -297,6 +298,11 @@
     width: 100%;
   }
 }
+#myTabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 #myTabs a[role=tab] {
   margin: 0;
 }
@@ -437,6 +443,9 @@ footer ul li a {
   margin-bottom: 1.1vw;
   width: 100%;
 }
+.subs .form-control {
+  box-shadow: none;
+}
 .subs-input-group {
   width: 100%;
 }
@@ -487,6 +496,11 @@ footer ul li a {
   border-radius: 3px 3px 0 0;
   color: #fff !important;
   font: 13px 'RobotoRegular', sans-serif;
+}
+@media screen and (min-width: 1185px) {
+  .btn-to-top {
+    margin-top: 32px;
+  }
 }
 .btn-to-top-icon {
   padding-left: 5px;
@@ -572,7 +586,7 @@ footer ul li a {
   color: #000 !important;
   font: 14px 'RobotoRegular', sans-serif;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1179px) {
   .header .ukrdev {
     display: none;
   }
@@ -601,7 +615,7 @@ footer ul li a {
   color: #000 !important;
   font: 12px 'RobotoRegular', sans-serif;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1324px) {
   .header .work-grafic {
     display: none;
   }
@@ -645,10 +659,22 @@ footer ul li a {
 .action i.icon-star-empty {
   font-size: 28px;
   color: #1a5eab;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+          transition: all 0.2s;
+}
+.action i.icon-star-empty:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .action i.icon-cart {
   font-size: 28px;
   color: #f7941b;
+  cursor: pointer;
+}
+.action i.icon-cart:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .action-wrapper {
   display: -webkit-box;

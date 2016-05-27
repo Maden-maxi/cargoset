@@ -63,8 +63,8 @@ $(function () {
 		keyboard: true,
 		type: 'single',
 		min: 10,
-		max: 2000,
-		from: 200,
+		max: 10000,
+		from: 2000,
 		step: 10,
 		prefix: "",
 		postfix: "мм",
@@ -75,6 +75,13 @@ $(function () {
 		onChange: track,
 		onFinish: track,
 		onUpdate: track
+	});
+	//Плавный скролл по якорям
+	$('a[href^="#"]').click(function(){
+		var elementClick = $(this).attr("href"),
+			destination = $(elementClick).offset().top;
+			$('html, body').animate( {scrollTop: destination }, 1000 );
+		return false;
 	});
 	
 });

@@ -31,6 +31,8 @@ footer
 	justify-content space-around
 	align-items flex-end
 .subs
+	.form-control
+		box-shadow none
 	border 1px solid #fff
 	padding 20px
 	margin-bottom 1.1vw
@@ -62,7 +64,9 @@ footer
 		outline none
 		width 100%
 		font-conf(#ccc, robreg, 13px)
-.btn-to-top 
+.btn-to-top
+	@media screen and (min-width: 1185px)
+		margin-top 32px
 	float right
 	margin-top 15px
 	background: linear-gradient(180deg, #3290f9, #1d74d4)

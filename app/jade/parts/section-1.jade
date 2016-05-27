@@ -64,18 +64,22 @@
 					dd 3 месяца
 -
 	var list ={
-		picture: ['pic2','pic1', 'pic3', 'pic4', 'pic2', 'pic1', 'pic2', 'pic1', 'pic5'],
-		name: ['Стяжной ремень <br>1.5 тн', 'Стопор текстильний двухветевой (2СТ)', 'Стяжной ремень<br> 1.5 тн', 'Стальной канат ГОСТ 3077-80', 'Стяжной ремень<br> 1.5 тн', 'Стопор текстильний двухветевой (2СТ)', 'Стяжной ремень<br> 1.5 тн', 'Стопор текстильний двухветевой (2СТ)', 'Скобка такелажная омегообразного типа'],
-		price: ['15.34', '119.00', '90.85', '119.00', '78.34', '28.70', '15.34', '119.00', '15.34']
+		picture: [ 'pic2', 'pic1', 'pic3', 'pic4', 'pic2', 'pic1', 'pic2', 'pic1', 'pic5'],
+		name: [ 'Стяжной ремень \r\n1.5 тн', 'Стопор текстильний двухветевой (2СТ)', 'Стяжной ремень\r\n 1.5 тн', 'Стальной канат ГОСТ 3077-80', 'Стяжной ремень\r\n 1.5 тн', 'Стопор текстильний двухветевой (2СТ)', 'Стяжной ремень\r\n 1.5 тн', 'Стопор текстильний двухветевой (2СТ)', 'Скобка такелажная омегообразного типа'],
+		price: [ '15.34', '119.00', '90.85', '119.00', '78.34', '28.70', '15.34', '119.00', '15.34']
 	} 
 .row.row-tab
 	.col-md-4.product
 		h3.product-list-header Сопутствующие товары
 		ul.product-list
-			li.product-list-wrapper
-				a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/pic2.jpg", alt="1")
-				a(href="#").product-list-name!= "Стяжной ремень <br>1.5 тн"
-				span.product-list-price!= "<span class='product-list-price-quantity'>15.34 </span> <span class='product-list-price-peritem'>грн/шт.</span>"
+			- for (var x = 0; x < list.name.length; x++)
+				li.product-list-wrapper
+					a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/#{list.picture[x]}.jpg", alt="1")
+					a(href="#").product-list-name #{list.name[x]}
+					span.product-list-price
+						span.product-list-price-quantity #{list.price[x]}
+						span.product-list-price-peritem грн/шт
+		//-
 			li.product-list-wrapper
 				a.product-list-link(href="#"): img.product-list-img(src="images/thumbs/pic1.jpg", alt="2")
 				a(href="#").product-list-name Стопор текстильний двухветевой (2СТ)

@@ -6,22 +6,25 @@
 	}
 	var i = items.name.length
 	var n = 0
+
 .centering.myCarusel
 	p.myCarusel-header Ранее 
 	p.myCarusel-header-sub Вы смотрели
 	.jcarousel-wrapper
 		.jcarousel
 			ul.jcarousel-list
-				while n < i
+				- for (var x = 0; x < items.name.length; x++)
 					li.jcarousel-item
-						img(src="images/slider/#{items.pictures[n]}.jpg", alt="#{n}").jcarousel-item-image
+						img(src="images/slider/#{items.pictures[x]}.jpg", alt="#{x}").jcarousel-item-image
 						.jcarousel-item-description
-							a(href="#").jcarousel-item-name #{items.name[n]}
+							a(href="#").jcarousel-item-name #{items.name[x]}
 							.jcarousel-item-price
 								span.jcarousel-item-price-from от
-								span.jcarousel-item-price-quantity #{items.price[n]}
+								span.jcarousel-item-price-quantity #{items.price[x]}
 								sup.jcarousel-item-price-currency грн/шт. 
-								span.hiddenvar!= n++
+								//span.hiddenvar!= "dad"
 							.text-success.jcarousel-item-status на складе
 		a.jcarousel-control-prev(href="#"): i.glyphicon.glyphicon-chevron-left
-		a.jcarousel-control-next(href="#"): i.glyphicon.glyphicon-chevron-right 
+		a.jcarousel-control-next(href="#"): i.glyphicon.glyphicon-chevron-right
+//- for (var x = 0; x < items.name.length; x++)
+	li #{items.name[x]}

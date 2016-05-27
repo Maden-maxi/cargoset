@@ -36,7 +36,7 @@
 			color #959595
 	.ukrdev
 		font-conf(#000, robreg, 14px)
-		@media screen and (max-width: 1024px)
+		@media screen and (max-width: 1179px)
 			display none
 	.logo
 		margin-left -15px
@@ -50,7 +50,7 @@
 	.work-grafic
 		line-height 18px
 		font-conf(#000, robreg, 12px)
-		@media screen and (max-width: 1024px)
+		@media screen and (max-width: 1324px)
 			display none
 		.caret
 			color blue !important
@@ -75,9 +75,16 @@
 	i.icon-star-empty
 		font-size 28px
 		color #1a5eab
+		cursor pointer
+		transition all .2s
+		&:hover
+			transform scale(1.05)
 	i.icon-cart
 		font-size 28px
 		color #f7941b
+		cursor pointer
+		&:hover
+			transform scale(1.05)
 	&-wrapper
 		display flex
 	&s

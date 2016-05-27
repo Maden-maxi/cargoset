@@ -39,8 +39,8 @@ gulp.task('stylus',function () {
         .pipe(postcss(processors))
         .pipe(gulp.dest('./app/css'));
 });
-gulp.task('watch:styles', function () {
-    gulp.watch('./app/**/*.styl', ['styles']);
+gulp.task('watch:stylus', function () {
+    gulp.watch('./app/**/*.styl', ['stylus']);
 });
 
 //bower
